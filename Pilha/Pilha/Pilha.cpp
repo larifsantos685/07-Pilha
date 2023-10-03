@@ -91,7 +91,6 @@ void push()
 		topo = novo; 
 	}
 	else {
-		// ponteiro que ve o proximo do novo, que é o topo 
 		NO* aux = novo; 
 		aux->prox = topo; 
 		topo = aux; 
