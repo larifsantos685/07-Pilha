@@ -87,12 +87,32 @@ void push()
 	cin >> novo->valor;
 	novo->prox = NULL;
 
+	if (topo == NULL) {
+		topo = novo; 
+	}
+	else {
+		// ponteiro que ve o proximo do novo, que é o topo 
+		NO* aux = novo; 
+		aux->prox = topo; 
+		topo = aux; 
+
+	}
+
 
 }
 
 void pop()
 {
+	if (topo == NULL) {
+		cout << "Nao tem mais elementos aqui" << endl; 
 
+	}
+	else {
+		NO* aux = topo; 
+		topo = topo->prox; 
+		cout << "Elemento " << aux->valor << " removido com sucesso" << endl; 
+		free(aux); 
+	}
 	
 
 }
